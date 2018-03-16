@@ -1,10 +1,10 @@
 
-// TypeScript supports only one constructor, unlike C++ constructors with multiple signatures.
-// To surpass this limitation, the fields can be declared as optional
 class Point {
     x: number;
     y: number;
 
+    // TypeScript supports only one constructor, unlike C++ constructors with multiple signatures.
+    // To surpass this limitation, the fields can be declared as optional
     constructor(x?: number, y?: number) {
         this.x = x;
         this.y = y;
