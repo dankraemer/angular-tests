@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 //    <div id="courses"> => "#courses"
 @Component({
     selector: 'courses',
-    template: '<h2>Courses</h2>' 
+    // {{}} used to render information dynamically
+    // This is called String Interpolation
+    template: '<h2>{{  getTitle() }}</h2>' 
 })
 export class CoursesComponent {
+    title = 'List of courses';
 
+    getTitle() {
+        return this.title;
+    } 
 }
