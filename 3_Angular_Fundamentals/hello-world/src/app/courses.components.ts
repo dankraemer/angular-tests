@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 // Use Component module from angular core library
 import { Component } from '@angular/core';
 
@@ -29,6 +30,14 @@ import { Component } from '@angular/core';
 export class CoursesComponent {
     title = 'List of courses';
     courses;
+
+    // Dependency Injection: to provide the dependencies of a class into its constructor
+    constructor(service: CoursesService) {
+        // By using this 'new' operator we have coupled this courses component to the courses service
+        // It is harder to unit test
+        //let service = new CoursesService();
+        this.courses = service.getCourses();
+    }
 
     getTitle() {
         return this.title;
