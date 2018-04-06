@@ -17,6 +17,10 @@ import { Component, OnInit } from '@angular/core';
 // <button class="btn btn-primary" [class.active]="isActive">Save</button>
 // If the condition evaluates to true, the class will be added to the element.
 
+// Style Binding is also a variation of Property Binding.
+// <button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'white'">Load</button>
+// The ternary operand will evaluate and select the property value.
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
