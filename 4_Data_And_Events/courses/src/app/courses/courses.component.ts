@@ -13,6 +13,10 @@ import { Component, OnInit } from '@angular/core';
 //
 // Property binding works only one way, from component to the DOM.
 
+// Class Binding is a variation of Property Binding.
+// <button class="btn btn-primary" [class.active]="isActive">Save</button>
+// If the condition evaluates to true, the class will be added to the element.
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -21,6 +25,7 @@ import { Component, OnInit } from '@angular/core';
 export class CoursesComponent implements OnInit {
   title = "List of courses";
   imageUrl = "http://lorempixel.com/400/200";
+  isActive=true;
 
   constructor() { }
 
