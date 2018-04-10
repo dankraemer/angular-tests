@@ -2,5 +2,5 @@
   <button (click)="onSave($event)">Event</button>
 </div>
 <div>
-  <input (keyup.enter)="onKeyUp()" />
+  <input #name (keyup.enter)="onKeyUp(name.value)" />
 </div>

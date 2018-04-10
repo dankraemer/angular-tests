@@ -34,7 +34,11 @@ export class CourseseventsComponent implements OnInit {
   // New way, filter the event at input element.
   // This way we don't need to pass the event object.
   // <input (keyup.enter)="onKeyUp()" />
-  onKeyUp() {
-    console.log("ENTER was pressed");
+
+  // To pass some information we can use template variables.
+  // Ex. for name field content
+  // <input #name (keyup.enter)="onKeyUp(name.value)" />
+  onKeyUp(name) {
+    console.log("ENTER was pressed:", name);
   }
 }
