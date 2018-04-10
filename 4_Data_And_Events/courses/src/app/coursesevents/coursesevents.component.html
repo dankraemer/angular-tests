@@ -2,5 +2,5 @@
   <button (click)="onSave($event)">Event</button>
 </div>
 <div>
-  <input #name (keyup.enter)="onKeyUp(name.value)" />
+  <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
 </div>

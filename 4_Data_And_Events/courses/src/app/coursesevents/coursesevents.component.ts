@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coursesevents.component.css']
 })
 export class CourseseventsComponent implements OnInit {
+  email = "me@example.com"
 
   constructor() { }
 
@@ -24,6 +25,13 @@ export class CourseseventsComponent implements OnInit {
     console.log("Div was clicked");
   }
 
+  // For Two-way Data Binding, Angular has a special syntax.
+  // [()] is called "banana in a box" 
+  // <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+  onKeyUp() {
+    console.log(this.email);
+  }
+
   // Old way of handling and filtering and event.
   // <input (keyup)="onKeyUp($event)" />
   //
@@ -38,7 +46,8 @@ export class CourseseventsComponent implements OnInit {
   // To pass some information we can use template variables.
   // Ex. for name field content
   // <input #name (keyup.enter)="onKeyUp(name.value)" />
-  onKeyUp(name) {
-    console.log("ENTER was pressed:", name);
-  }
+  //onKeyUp(name) {
+  //  console.log("ENTER was pressed:", name);
+  //}
+
 }
