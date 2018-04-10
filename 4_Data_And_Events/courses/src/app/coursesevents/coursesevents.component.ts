@@ -22,6 +22,19 @@ export class CourseseventsComponent implements OnInit {
   // Test Event Bubbling, an events bubbles up the DOM tree.
   onDivClicked() {
     console.log("Div was clicked");
+  }
 
+  // Old way of handling and filtering and event.
+  // <input (keyup)="onKeyUp($event)" />
+  //
+  // onKeyUp($event) {
+  //   if ($event.keyCode == 13) console.log("ENTER was pressed");
+  // }
+
+  // New way, filter the event at input element.
+  // This way we don't need to pass the event object.
+  // <input (keyup.enter)="onKeyUp()" />
+  onKeyUp() {
+    console.log("ENTER was pressed");
   }
 }
