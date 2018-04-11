@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesattrComponent } from './coursesattr/coursesattr.component';
 import { CourseseventsComponent } from './coursesevents/coursesevents.component';
+import { CoursepipesComponent } from './coursepipes/coursepipes.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CourseseventsComponent } from './coursesevents/coursesevents.component'
     AppComponent,
     CoursesComponent,
     CoursesattrComponent,
-    CourseseventsComponent
+    CourseseventsComponent,
+    CoursepipesComponent
   ],
   imports: [
     BrowserModule,
