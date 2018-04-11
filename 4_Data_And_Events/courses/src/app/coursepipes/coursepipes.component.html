@@ -5,3 +5,7 @@
   {{ course.price | currency:'BRL':true:'3.2-2' }} <br/>
   {{ course.releaseDate | date:'shortDate' }}
 </div>
+
+<div>
+  {{ text | summary:15 }}
+</div>
