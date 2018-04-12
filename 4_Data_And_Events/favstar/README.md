@@ -8,6 +8,7 @@ $ ng new favstar
 $ cd favstar
 $ ng generate component favstar
 $ npm install bootstrap --save
+$ npm install font-awesome --save
 
 ## Development server
 
