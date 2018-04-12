@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FavstarComponent } from './favstar/favstar.component';
+import { TitlecasingComponent } from './titlecasing/titlecasing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FavstarComponent
+    FavstarComponent,
+    TitlecasingComponent
   ],
   imports: [
     BrowserModule,
