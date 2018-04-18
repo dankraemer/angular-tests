@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'favorite',
@@ -9,6 +9,7 @@ export class FavoriteComponent implements OnInit {
   // The @Input decorator is used to define Input Properties.
   // An alias can be used to keep the contrart to a component stable.
   @Input('is-favorite') isFavorite: boolean;
+  @Output() change = new EventEmitter();
 
   constructor() { }
 
@@ -21,6 +22,7 @@ export class FavoriteComponent implements OnInit {
 
   onStarClick() {
     this.isFavorite = !this.isFavorite;
+    this.change.emit();
     console.log("Star clicked!", this.isFavorite);
   }
 
