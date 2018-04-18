@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent implements OnInit {
-  // The @Input decorator is used to define Input Properties
-  @Input() isFavorite: boolean;
+  // The @Input decorator is used to define Input Properties.
+  // An alias can be used to keep the contrart to a component stable.
+  @Input('is-favorite') isFavorite: boolean;
 
   constructor() { }
 
